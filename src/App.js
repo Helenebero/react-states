@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
+
+import MyCounter from "./Components/MyCounter";
 
 // Class Based State Example
 import ClassStateExample from "./Components/ClassStateExample/ClassStateExample";
@@ -24,14 +26,23 @@ import Component1 from "./Components/UseContext/Component1";
 
 // useContext
 import UsingUseContext from "./Components/UseContext/UsingUseContext";
+import IncreaseDecreaseCount from "./Components/IncreaseDecreaseCount";
+import UseEffectForTitle from "./Components/UseEffectForTitle";
+import UseContextExample from "./Components/UseContextExample";
 
 // First creat context
+// Context helps you make states, functions or variables global
 export const MyContext = React.createContext();
 
 function App() {
   return (
     <div className="App">
-      <UsingClassLifeCycleComponent />
+      {/* <UsingClassLifeCycleComponent /> */}
+      <MyCounter />
+      <IncreaseDecreaseCount />
+      <UseEffectForTitle />
+      {/* Use Context */}
+      <UseContextExample />
     </div>
   );
 }
